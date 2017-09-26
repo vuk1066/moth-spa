@@ -6,9 +6,8 @@ import  App from './App'
 const AppRouter = (props) => (
 	<BrowserRouter>
 	    <div>
-	    	<Route exact path="/" component={App}>
-    			<Route exact path="/:pictureId" component={Item}/>
-    		</Route>
+	    	<Route exact path="/" component={App} />
+    		<Route path="/:pictureId" component={Item}/>
         
 		</div>
 	</BrowserRouter>

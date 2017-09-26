@@ -1,17 +1,12 @@
 import React from 'react'
-import Redux from 'redux' 
 import { createStore } from 'redux'
 import { Link } from 'react-router-dom'
+import jsonData from './testData'
  
 class ItemList extends React.Component { 
   constructor() { 
     super(); 
-     this.state={items:[]}; 
-  } 
-  componentDidMount(){ 
-    fetch(`http://jsonplaceholder.typicode.com/photos`) 
-    .then(result=>result.json()) 
-    .then(items=>this.setState({items})) 
+     this.state={items:jsonData}; 
   } 
   render() { 
     return( 
