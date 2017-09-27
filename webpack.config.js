@@ -1,7 +1,9 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     entry: './src/js/main.js',
     output: {
-        path: './build',
+        path: __dirname + '/build/assets',
         filename: 'prod-main.js',
         publicPath: 'index.html'
     },
@@ -12,18 +14,21 @@ module.exports = {
     },
     devServer: {
         inline: true,
-        port: 3333
+        port: 3000
     },
     module: {
          loaders: [
           {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            loader: 'babel',
+            loader: 'babel-loader',
             query: {
                 presets: ['es2015', 'react']
             }
           }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('app.css')
+    ]
  };
