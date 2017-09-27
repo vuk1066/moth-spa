@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'http://ec2-35-176-71-225.eu-west-2.compute.amazonaws.com/',
+      host: 'www.theraremoth.com',
       key: '~/.ssh/moth-ssh.pem',
       ref: 'origin/master',
       repo: 'git@github.com:vuk1066/moth-spa.git',
