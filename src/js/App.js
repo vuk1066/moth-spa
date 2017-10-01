@@ -17,12 +17,10 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <Switch>
+           <Switch>
             <Route exact path="/" render={() => <ItemList result={this.state.items} />}/>
             <Route path="/:pictureId" component={Item} />
           </Switch>
-        </div>
       </BrowserRouter>
     );
   }
