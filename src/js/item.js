@@ -20,10 +20,10 @@ class Item extends React.Component {
     return (
       <div>
         <h1>
-          {this.state.item.id} - {this.state.item.title}
+         #{this.state.item.id} - {this.state.item.title}
         </h1>
         <img src={this.state.item.url} />
-        <Link to={"/"}> Back </Link>
+        <Link className="home--link" to={"/"}> Home >>> </Link>
       </div>
     );
   }
